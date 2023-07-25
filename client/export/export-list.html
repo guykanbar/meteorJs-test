@@ -1,0 +1,19 @@
+<!-- export-list.html -->
+<template name="exportList">
+  <h1>Liste des exports</h1>
+
+  <button class="btn-export">Export</button>
+
+  <ul>
+    {{#each exports}}
+      <li>
+        {{#if completed}}
+          Export terminé - URL du résultat : <a href="{{resultUrl}}" target="_blank">{{resultUrl}}</a>
+        {{else}}
+          Export en cours - Progression : {{progress}}%
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</template>
+  
