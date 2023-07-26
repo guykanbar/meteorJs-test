@@ -14,4 +14,11 @@ Template.exportList.events({
       }
     });
   },
+  'click .btn-clear'(event, instance) {
+    Meteor.call('deleteExports', (error, result) => {
+      if (error) {
+        console.error('Erreur lors de la suppression des exports :', error.reason);
+      }
+    });
+  },
 });
