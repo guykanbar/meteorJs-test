@@ -1,4 +1,4 @@
-import { ExportsCollection } from "../collections/export-list";
+import { ExportsCollection } from "../collections/export";
 import { LEMPIRE_URLS } from "../constants";
 
 const UPDATE_PERIOD_MS = 1000;

@@ -1,4 +1,4 @@
-import { ExportsCollection } from "../collections/export-list";
+import { ExportsCollection } from "../collections/export";
 
 Meteor.methods({
     deleteExports() {
