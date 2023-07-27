@@ -1,10 +1,13 @@
 <!-- export-list.html -->
 <template name="exportList">
-  <h1>Liste des exports</h1>
+  <h1>Welcome to Exports. Please log in to have access to our platform</h1>
 
-  <button class="btn-export">Export</button>
-  <button class="btn-clear">Clear Exports</button>
+  {{#if currentUser}}
+    <h1>Liste des exports</h1>
 
+    <button class="btn-export">Export</button>
+    <button class="btn-clear">Clear Exports</button>
+  {{/if}}
   <ul>
     {{#each exports}}
       <li>
