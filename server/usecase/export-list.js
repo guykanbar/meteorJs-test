@@ -5,10 +5,11 @@ const UPDATE_PERIOD_MS = 1000;
 const UPDATE_PROGRESS_UNIT = 5;
 
 Meteor.methods({
-  startExport() {
+  startExport(userId) {
     const exportId = ExportsCollection.insert({
       progress: 0,
       completed: false,
+      userId: userId
     });
 
     const updateProgress = () => {

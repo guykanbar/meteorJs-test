@@ -1,7 +1,7 @@
 import { ExportsCollection } from "../collections/export";
 
 Meteor.methods({
-    deleteExports() {
-        return ExportsCollection.remove({});
+    deleteExports(userId) {
+        return ExportsCollection.remove({userId: userId});
     },
 });
